@@ -1,8 +1,11 @@
+var startTime = new Date().getTime();
 
-console.log ("test");
+
 function shapeDisplay () {
   var shape = document.getElementById('shape');
-  console.log ("function ran");
+
+  var endTime = new Date().getTime();
+  
   if (shape.style.display === "none") {
     shape.style.display = "block";
   } else {
