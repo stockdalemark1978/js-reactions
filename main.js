@@ -12,6 +12,6 @@ function shapeDisplay () {
     shape.style.display = "none";
   }
 
-  var timeTaken = endTime - startTime;
+  var timeTaken = (endTime - startTime) / 1000 + " seconds";
   console.log (timeTaken);
 }
