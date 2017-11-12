@@ -6,6 +6,8 @@ function shapeDisplay () {
 
   var endTime = new Date().getTime();
 
+  var timeMeasure = document.getElementById('timeMeasure');
+
   if (shape.style.display === "none") {
     shape.style.display = "block";
   } else {
@@ -14,4 +16,6 @@ function shapeDisplay () {
 
   var timeTaken = (endTime - startTime) / 1000 + " seconds";
   console.log (timeTaken);
+  timeMeasure.innerHTML = timeTaken;
+
 }
