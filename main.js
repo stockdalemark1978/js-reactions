@@ -2,11 +2,11 @@ var startTime = new Date().getTime();
 var shape = document.getElementById('shape');
 
 function makeShapeReappear () {
-  shape.style.display = "block";
+  document.getElementById('shape').style.display = "block";
   startTime = new Date().getTime();
 }
 
-setTimeout(makeShapeReappear (), 3000
+setTimeout(makeShapeReappear, 3000
 );
 
 
