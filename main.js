@@ -12,18 +12,21 @@ max = Math.floor(max);
 return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
-setTimeout(makeShapeReappear, getRandomInt(1000, 4000)
-);
+function appearAfterDelay() {
+  setTimeout(makeShapeReappear, getRandomInt(1000, 4000)
+  );
+}
+
+appearAfterDelay();
+
 
 
 
 function shapeDisplay () {
 
-
   var endTime = new Date().getTime();
 
   var timeMeasure = document.getElementById('timeMeasure');
-
 
 
   if (shape.style.display === "none") {
@@ -32,10 +35,9 @@ function shapeDisplay () {
     shape.style.display = "none";
   }
 
-
-
   var timeTaken = (endTime - startTime) / 1000 + " seconds";
   console.log (timeTaken);
   timeMeasure.innerHTML = timeTaken;
+  appearAfterDelay();
 
 }
