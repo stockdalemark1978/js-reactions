@@ -2,11 +2,17 @@ var startTime = new Date().getTime();
 var shape = document.getElementById('shape');
 
 function makeShapeReappear () {
-  document.getElementById('shape').style.display = "block";
+  shape.style.display = "block";
   startTime = new Date().getTime();
 }
 
-setTimeout(makeShapeReappear, 3000
+function getRandomInt(min, max) {
+min = Math.ceil(min);
+max = Math.floor(max);
+return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
+setTimeout(makeShapeReappear, getRandomInt(1000, 10000)
 );
 
 
