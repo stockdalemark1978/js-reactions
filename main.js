@@ -4,6 +4,12 @@ var shape = document.getElementById('shape');
 function makeShapeReappear () {
   changePosition();
   getRandomColor();
+  
+  if (Math.random() > .5) {
+    shape.style.borderRadius = 50 + "%";
+  }else {
+    shape.style.borderRadius = 0 + "%"
+  }
   shape.style.display = "block";
   startTime = new Date().getTime();
 
@@ -40,6 +46,7 @@ function getRandomColor() {
   }
 
   shape.style.backgroundColor = color;
+
   // return color;
 
 
