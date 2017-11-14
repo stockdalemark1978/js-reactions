@@ -23,8 +23,10 @@ appearAfterDelay();
 
 
 function changePosition() {
-  var randomLeft = getRandomInt(1, 500);
+  var randomLeft = getRandomInt(1, 1000);
+  var randomTop = getRandomInt(1, 700);
   shape.style.left = randomLeft + "px";
+  shape.style.top = randomTop + "px";
 }
 
 function shapeDisplay () {
