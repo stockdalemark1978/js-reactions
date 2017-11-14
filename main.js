@@ -2,8 +2,10 @@ var startTime = new Date().getTime();
 var shape = document.getElementById('shape');
 
 function makeShapeReappear () {
+  changePosition();
   shape.style.display = "block";
   startTime = new Date().getTime();
+
 }
 
 function getRandomInt(min, max) {
@@ -20,7 +22,10 @@ function appearAfterDelay() {
 appearAfterDelay();
 
 
-
+function changePosition() {
+  var randomLeft = getRandomInt(1, 500);
+  shape.style.left = randomLeft + "px";
+}
 
 function shapeDisplay () {
 
