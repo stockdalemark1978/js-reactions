@@ -3,6 +3,7 @@ var shape = document.getElementById('shape');
 
 function makeShapeReappear () {
   changePosition();
+  getRandomColor();
   shape.style.display = "block";
   startTime = new Date().getTime();
 
@@ -24,12 +25,27 @@ appearAfterDelay();
 
 function changePosition() {
   var randomNum = Math.random() * 500;
-  
+
   shape.style.left = randomNum + "px";
   shape.style.top = randomNum + "px";
   shape.style.height = randomNum + "px";
   shape.style.width = randomNum + "px";
 }
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF'.split('');
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+
+  shape.style.backgroundColor = color;
+  // return color;
+
+
+}
+
+
 
 function shapeDisplay () {
 
